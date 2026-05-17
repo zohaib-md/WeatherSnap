@@ -1,6 +1,8 @@
 <div align="center">
 
-# ⛅ WeatherSnap
+#  WeatherSnap
+<img width="690" height="250" alt="weathersnap_banner_v3" src="https://github.com/user-attachments/assets/fd34f049-ce05-4159-b212-27cffee70a91" />
+
 
 **Real-time weather intelligence with camera evidence**
 
@@ -19,7 +21,7 @@
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 <table>
 <tr>
@@ -57,7 +59,7 @@
 </td>
 <td width="50%">
 
-### 🎨 Premium UI/UX
+###  Premium UI/UX
 - **Playfair Display** + **Inter** font pairing
 - Dark olive theme with gradient headers
 - Spring-physics animations throughout
@@ -70,7 +72,7 @@
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 WeatherSnap follows **Clean Architecture** with the **MVVM** pattern, ensuring separation of concerns and testability.
 
@@ -110,7 +112,7 @@ app/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -127,7 +129,7 @@ app/
 
 ---
 
-## 🎨 Design Language
+##  Design Language
 
 WeatherSnap uses a **dark olive military-green** aesthetic inspired by premium fintech applications:
 
@@ -147,10 +149,10 @@ Borders:     #363A26               (subtle card outlines)
 | Splash Title | **Playfair Display Italic** | Accent color, editorial emphasis |
 
 ### Animated Elements
-- 🌤️ **Weather Loader** — floating cloud with pulsing olive dots
-- 🗺️ **Lottie Search** — animated map search on empty state
-- ⛅ **Splash Screen** — phased spring animations with breathing glow
-- 📋 **Report Cards** — staggered slide-in with fade animations
+-  **Weather Loader** — floating cloud with pulsing olive dots
+-  **Lottie Search** — animated map search on empty state
+-  **Splash Screen** — phased spring animations with breathing glow
+-  **Report Cards** — staggered slide-in with fade animations
 
 ---
 
@@ -166,7 +168,7 @@ Borders:     #363A26               (subtle card outlines)
 
 ---
 
-## 🔧 Developer Decisions
+##  Developer Decisions
 
 ### Image Compression Strategy
 Photos captured via CameraX are compressed on-device before storage. The app tracks both original and compressed file sizes, displaying the compression ratio to demonstrate efficient storage management.
@@ -207,7 +209,7 @@ git clone https://github.com/zohaib-md/WeatherSnap.git
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 All dependencies are managed via **Gradle Version Catalog** (`libs.versions.toml`):
 
@@ -231,7 +233,7 @@ This project is built as part of an internship assessment.
 
 <div align="center">
 
-**Built with ❤️ using Kotlin & Jetpack Compose**
+**Built with ❤️ using Kotlin & Jetpack Compose by Mohammad Zohaib**
 
 *WeatherSnap — Where weather meets evidence*
 
