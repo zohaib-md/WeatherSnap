@@ -1,5 +1,6 @@
 package com.project.weathersnap.di
 
+import com.project.weathersnap.BuildConfig
 import com.project.weathersnap.data.remote.GeocodingApiService
 import com.project.weathersnap.data.remote.WeatherApiService
 import dagger.Module
@@ -13,7 +14,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
-// 1. Define custom Qualifiers to distinguish between the two base URLs
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class WeatherRetrofit
@@ -26,20 +26,20 @@ annotation class GeocodingRetrofit
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    // 2. Provide the OkHttpClient with the required Logging Interceptor
     @Provides
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
-        val loggingInterceptor = HttpLoggingInterceptor().apply {
-            // Logs request and response lines and their respective headers and bodies
-            level = HttpLoggingInterceptor.Level.BODY
-        }
-        return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .build()
+        return OkHttpClient.Builder().apply {
+            // Bonus: debug-only network logging
+            if (BuildConfig.DEBUG) {
+                val loggingInterceptor = HttpLoggingInterceptor().apply {
+                    level = HttpLoggingInterceptor.Level.BODY
+                }
+                addInterceptor(loggingInterceptor)
+            }
+        }.build()
     }
 
-    // 3. Provide the Retrofit instance for Weather Data
     @Provides
     @Singleton
     @WeatherRetrofit
@@ -51,7 +51,6 @@ object NetworkModule {
             .build()
     }
 
-    // 4. Provide the Retrofit instance for City Geocoding
     @Provides
     @Singleton
     @GeocodingRetrofit
@@ -63,7 +62,6 @@ object NetworkModule {
             .build()
     }
 
-    // 5. Provide the actual API Services that your Repositories will inject
     @Provides
     @Singleton
     fun provideWeatherApiService(@WeatherRetrofit retrofit: Retrofit): WeatherApiService {
