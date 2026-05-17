@@ -19,6 +19,29 @@
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><b>Splash Screen</b></td>
+<td align="center"><b>Dashboard</b></td>
+<td align="center"><b>Weather Data</b></td>
+<td align="center"><b>Create Report</b></td>
+<td align="center"><b>Saved Reports</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/01_splash.jpg" width="180"/></td>
+<td><img src="screenshots/02_dashboard.jpg" width="180"/></td>
+<td><img src="screenshots/03_weather.jpg" width="180"/></td>
+<td><img src="screenshots/04_create_report.jpg" width="180"/></td>
+<td><img src="screenshots/05_saved_reports.jpg" width="180"/></td>
+</tr>
+</table>
+</div>
+
+---
+
 ## ✨ Key Features
 
 <table>
