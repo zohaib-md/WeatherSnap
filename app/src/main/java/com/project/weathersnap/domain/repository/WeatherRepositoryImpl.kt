@@ -48,6 +48,10 @@ class WeatherRepositoryImpl @Inject constructor(
         reportDao.insertReport(report)
     }
 
+    override suspend fun deleteReport(report: ReportEntity) {
+        reportDao.deleteReport(report)
+    }
+
     override fun getAllSavedReports(): Flow<List<ReportEntity>> {
         return reportDao.getAllReports()
     }

@@ -12,5 +12,6 @@ interface WeatherRepository {
 
     // Local DB calls
     suspend fun saveReport(report: ReportEntity)
+    suspend fun deleteReport(report: ReportEntity)
     fun getAllSavedReports(): Flow<List<ReportEntity>>
 }
